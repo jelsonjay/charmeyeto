@@ -37,32 +37,32 @@ document.querySelectorAll('.small-image-3').forEach(e => {
 	};
 });
 
-// countdown date
-// let countDate = new Date("may, 2022 00:00:00").getTime();
+//countdown date
+let countDate = new Date('aug, 2022 00:00:00').getTime();
 
-// function countDown() {
-//   let now = new Date().getTime();
-//   gap = now - countDate;
+function countDown() {
+	let now = new Date().getTime();
+	gap = now - countDate;
 
-//   let seconds = 1000;
-//   let minutes = seconds * 60;
-//   let hours = minutes * 60;
-//   let day = hours * 24;
+	let seconds = 1000;
+	let minutes = seconds * 60;
+	let hours = minutes * 60;
+	let day = hours * 24;
 
-//   let d = Math.floor(gap / day);
-//   let h = Math.floor((gap % day) / hours);
-//   let m = Math.floor((gap % hours) / minutes);
-//   let s = Math.floor((gap % minutes) / seconds);
+	let d = Math.floor(gap / day);
+	let h = Math.floor((gap % day) / hours);
+	let m = Math.floor((gap % hours) / minutes);
+	let s = Math.floor((gap % minutes) / seconds);
 
-//   document.getElementById("day").innerText = d;
-//   document.getElementById("hours").innerText = h;
-//   document.getElementById("minutes").innerText = m;
-//   document.getElementById("seconds").innerText = s;
-// }
+	document.getElementById('days').innerText = d;
+	document.getElementById('hours').innerText = h;
+	document.getElementById('minutes').innerText = m;
+	document.getElementById('seconds').innerText = s;
+}
 
-// setInterval(function () {
-//   countDown();
-// }, 1000);
+setInterval(function () {
+	console.log(countDown());
+}, 1000);
 
 // theme shiwt dark mode
 let themeToggle = document.querySelector('#theme-toggle');
@@ -103,7 +103,7 @@ var swiper = new Swiper('.product-slider', {
 			slidesPerView: 3
 		},
 		1000: {
-			slidesPerView: 4
+			slidesPerView: 3
 		}
 	}
 });
@@ -127,6 +127,9 @@ var swiper = new Swiper('.review-slider', {
 			slidesPerView: 2
 		},
 		800: {
+			slidesPerView: 3
+		},
+		1000: {
 			slidesPerView: 3
 		}
 	}

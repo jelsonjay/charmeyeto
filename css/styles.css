@@ -26,8 +26,19 @@
 html {
 	font-size: 62.5%;
 	overflow-x: hidden;
-	scroll-padding-top: 9rem;
+	scroll-padding-top: 7.5rem;
 	scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+	width: 1rem;
+}
+html::-webkit-scrollbar-track {
+	background: var(--clr-white);
+}
+html::-webkit-scrollbar-thumb {
+	background: var(--clr-primary);
+	border-radius: 5rem;
 }
 body {
 	background-color: var(--clr-bg);
@@ -73,7 +84,7 @@ section {
 	color: var(--clr-primary);
 	text-transform: uppercase;
 }
-/*===========heade===============*/
+/*===========header===============*/
 header {
 	width: 100%;
 	display: flex;
@@ -558,9 +569,10 @@ header.active {
 	margin-top: 1rem;
 }
 .footer .footer-container .copyright {
-	font-size: 2rem;
+	font-size: 1.6rem;
 	margin-top: 2rem;
 	padding-top: 2rem;
+	text-transform: capitalize;
 	border-top: var(--border);
 	color: var(--clr-black);
 	text-align: center;
@@ -601,6 +613,12 @@ header.active {
 	}
 	.home .content img {
 		width: 100%;
+	}
+	.footer .footer-container .card-container .card h3 {
+		font-size: 2rem;
+	}
+	.footer .footer-container .copyright {
+		font-size: 1.3rem;
 	}
 }
 
